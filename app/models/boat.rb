@@ -27,7 +27,6 @@ class Boat < ActiveRecord::Base
   end
 
   def self.longest
-    #Boat.all.order(length: :desc).limit(1)[0]
     order('length DESC').first
   end
 
