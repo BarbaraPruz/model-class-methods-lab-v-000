@@ -38,7 +38,7 @@ class Captain < ActiveRecord::Base
   #   boats = BoatClassification.find_boats_by_classification (search.id)
   #   captains = boats.map { | boat | boat.captain }.uniq.compact
   #   Captain.where(id: captains.map(&:id))
-  end
+  # end
 
 
 end
