@@ -3,7 +3,8 @@ class Captain < ActiveRecord::Base
 
   def self.catamaran_operators
     # search through boats to find catamarans and then return captains of those boats
-    find_captains_by_boat_class("Catamaran")
+#    find_captains_by_boat_class("Catamaran")
+    includes(:classifications).where(classifications: { name: 'Catamaran' })
   end
 
   def self.sailors
