@@ -5,8 +5,9 @@ class Boat < ActiveRecord::Base
   has_many    :classifications, through: :boat_classifications
 
   def self.first_five
-    boats = Boat.first(5) # returns array
-    Boat.where(id: boats.map(&:id))  #convert to activerecord relation
+    ## boats = Boat.first(5) # returns array
+    ## Boat.where(id: boats.map(&:id))  #convert to activerecord relation
+    Boat.all.limit(5)
   end
 
   def self.dinghy
